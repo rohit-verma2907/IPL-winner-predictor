@@ -1,6 +1,5 @@
 import streamlit as st 
-import pickle
-import sklearn
+import pickle 
 import pandas as pd
 st.title('IPL Win Predictor')
 
