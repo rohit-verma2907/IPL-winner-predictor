@@ -46,7 +46,7 @@ if st.button('Predict Probability'):
 
     input_df = pd.DataFrame({'batting_team':[batting_team],'bowling_team':[bowling_team],'city':[selected_city],'runs_left':[runs_left],'balls_left':[balls_left],'wickets':[wickets],'total_runs_x':[target],'crr':[crr],'rrr':[rrr]})
     with open("pipe.pkl", "rb") as pickle_file:
-        result = pickle_file.predict_proba(input_df)
+        result = pickle_file.predict(input_df)
         loss = result[0][0]
         win = result[0][1]
     st.header(batting_team + "- " + str(round(win*100)) + "%")
